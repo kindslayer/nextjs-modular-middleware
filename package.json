@@ -19,8 +19,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "prepare": "is-ci"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
