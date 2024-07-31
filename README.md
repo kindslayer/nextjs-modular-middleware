@@ -7,9 +7,9 @@ A customizable middleware solution for Next.js 14, allowing you to define and ch
 Install the package via npm:
 
 ```bash
-npm install nextjs_middleware_approuter
+npm install nextjs-multiple-middleware
 or 
-pnpm add nextjs_middleware_approuter
+pnpm add nextjs-multiple-middleware
 ```
 ## Usage
 This package provides a flexible way to manage and execute middleware functions in a Next.js application. Follow the steps below to integrate and use the middleware.
@@ -24,19 +24,19 @@ export async function yourMiddleware(req: NextRequest): Promise<NextResponse | v
 // 	your middleware logic
 }
 ```
-2. Configure Middleware Registry: Use the MiddlewareRegistry class to manage and execute your middleware functions. Import the MiddlewareRegistry from the npm package.
+2. Configure Middleware Registry: Use the BossMiddleware class to manage and execute your middleware functions. Import the BossMiddleware from the npm package.
    there are two types of middleware functions. ones that have exclusive path and the ones the don't. the Exclusive path middlewares are only working on the exact path and not on other path
 
 ```javascript
 // your path to middleware.ts
 
 import { NextRequest, NextResponse } from "next/server";
-import { MiddlewareRegistry } from "nextjs_middleware_approuter";
+import { BossMiddleware } from "nextjs-multiple-middleware";
 import { yourGlobalMiddleware } from "./yourMiddleware";
 import { otherMiddleware } from "./yourMiddleware";
 
 export default async function middleware(req: NextRequest, res: NextResponse): Promise<NextResponse> {
-	const registry = new MiddlewareRegistry(req, [yourGlobalMiddleware]);
+	const registry = new BossMiddleware(req, [yourGlobalMiddleware]);
 
 	
 	// global middleware is running on all of your global path that you defined

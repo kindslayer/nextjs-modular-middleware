@@ -1,25 +1,11 @@
 {
-  "name": "nextjs-boss-middlware",
-  "private": false,
-  "version": "0.0.1",
-  "type": "module",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
+  "name": "nextjs-multiple-middleware",
+  "version": "0.0.2",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "description": "A custom middleware with modular setup and ability to create multiple middlewares to use in next js projects",
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "files": [
-    "/dist"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "nextjs",
     "middleware",
@@ -31,31 +17,22 @@
     "singleton middleware",
     "nextjs middleware"
   ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "prepare": "is-ci"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kindslayer/nextjs-modular-middleware"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "prepare": "npm run build",
-    "preview": "vite preview"
-  },
   "license": "MIT",
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "next": "14.2.5"
-  },
   "devDependencies": {
-    "@types/node": "^20.14.11",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.15.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.4",
-    "vite-plugin-dts": "^1.7.1",
-    "@vitejs/plugin-react": "^4.3.1"
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.2",
+    "next": "^14.2.3",
+    "react": "^18.3.1"
   }
 }

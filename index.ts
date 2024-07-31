@@ -1,3 +1,3 @@
-import middleware from "@/middleware/middleware";
+import {BossMiddleware} from "./src/BossMiddleware";
 
-export default middleware;
+export default BossMiddleware
