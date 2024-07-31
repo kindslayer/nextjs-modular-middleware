@@ -1,3 +1,3 @@
-import "./src/Toast/index.css"
+import middleware from "@/middleware/middleware";
 
-export * from "./src/Toast";
+export default middleware;
