@@ -1,6 +1,6 @@
 {
   "name": "nextjs-multiple-middleware",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -27,11 +27,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@types/react": "^18.3.2",
-    "next": "^14.2.3",
-    "react": "^18.3.1"
+    "@types/react": "19.0.8",
+    "next": "15.1.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.8"
+    }
   }
 }
